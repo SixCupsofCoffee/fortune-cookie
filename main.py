@@ -45,9 +45,9 @@ def getRandomFortune():
     ]
 
     # randomly select one of the fortunes
-    index = random.randint(0,2)
+    index = random.choice(list(fortunes))
 
-    return fortunes[index]
+    return index
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler)
